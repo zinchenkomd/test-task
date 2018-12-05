@@ -1,4 +1,5 @@
 document.getElementById("login_form").addEventListener("submit", function(event){
+    disableForm();
     event.preventDefault();
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "https://us-central1-mercdev-academy.cloudfunctions.net/login", true);
@@ -16,6 +17,7 @@ document.getElementById("login_form").addEventListener("submit", function(event)
         } else {
             showErrorMessage('Something went wrong');
         }
+        enableForm();
     };
 });
 
@@ -40,4 +42,16 @@ function showLoginForm() {
 function showLogoutForm() {
     document.getElementById("login_form").classList.add('login_form_hidden');
     document.getElementById("logout_form").classList.remove('logout_form_hidden');
+}
+
+function disableForm() {
+    document.getElementById("email").disabled = true;
+    document.getElementById("password").disabled = true;
+    document.getElementById("button").disabled = true;
+}
+
+function enableForm() {
+    document.getElementById("email").disabled = false;
+    document.getElementById("password").disabled = false;
+    document.getElementById("button").disabled = false;
 }
