@@ -1,0 +1,176 @@
+@font-face {
+    font-family: GothamBold;
+    src: url('./fonts/GothamBold.otf');
+}
+@font-face {
+    font-family: GothamMedium;
+    src: url('./fonts/GothamMedium.woff');
+}
+body {
+    background: url("./images/background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    width: 145px;
+    height: 48px;
+    border-radius: 100px;
+    box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
+    background-color: #ed4159;
+    font: 14px GothamMedium, Verdana, sans-serif;
+    padding-top: 1px;
+    color: white;
+}
+
+button:hover, button:active {
+    color: #ed4159;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    width: 140px;
+    height: 48px;
+    border-radius: 100px;
+    border-width: 0;
+    box-shadow: 0 6px 20px 0 rgba(237, 65, 89, 0.4);
+    background-color: #ffffff;
+}
+
+svg.logo {
+    width: 182px;
+    height: 40px;
+    margin-right: 17px;
+    margin-top: 43px;
+}
+
+.form_container {
+    margin: 37px 1em 1em 1em;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.login_form {
+    border-radius: 8px;
+    margin: 10px auto 10px auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+    padding: 2em 1.5em 3em 1.5em;
+}
+
+.login_form_hidden {
+    display: none;
+}
+
+.login_form__title  {
+    font-family: GothamBold, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    margin-bottom: 32px;
+    margin-top: 0;
+}
+
+.login_form__email, .login_form__password {
+    width: 100%;
+    height: 48px;
+    background-color: #f1f1f1;
+    font-family: GothamMedium, Verdana, sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    color: #262626;
+    opacity: 0.8;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border-width: 0;
+    border-color: rgba(151, 151, 151, 0.25);
+    margin: 0 0 1em 0;
+}
+.login_form__email:-webkit-autofill, .login_form__password:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100px #f1f1f1 inset;
+}
+
+.login_form__email::placeholder, .login_form__password::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #262626;
+    opacity: 0.4; /* Firefox */
+}
+
+.login_form__email:-ms-input-placeholder, .login_form__password:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #262626;
+    opacity: 0.4;
+}
+
+.login_form__email::-ms-input-placeholder, .login_form__password::-ms-input-placeholder { /* Microsoft Edge */
+    color: #262626;
+    opacity: 0.4;
+}
+
+.login_form__email.error, .login_form__password.error {
+    color: #ed4159;
+    opacity: 1;
+    border: 1px solid #ed4159;
+}
+
+.login_form__message_container {
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgba(237, 65, 89, 0.25);
+    text-align: left;
+    margin: 0 auto 32px auto;
+}
+
+.login_form__message_container_hidden {
+    display: none;
+}
+
+.login_form__message {
+    font: 14px GothamMedium, Verdana, sans-serif;
+    color: #ed4159;
+    opacity: 1;
+    padding: 10px 16px 10px 16px;
+    margin: 0
+
+}
+
+.login_form__button {
+    margin-top: 5px;
+}
+
+.logout_form {
+    border-radius: 8px;
+    margin: 10px auto 10px auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+    padding-top: 48px;
+    padding-bottom: 60px;
+}
+
+.logout_form_hidden {
+    display: none;
+}
+
+.logout_form__avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+}
+
+.logout_form_name {
+    font-family: GothamBold, Verdana, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 0.23px;
+    margin-top: 40px;
+    margin-bottom: 48px;
+    color: #262626;
+
+}
