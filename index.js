@@ -6,7 +6,6 @@ document.getElementById("login_form").addEventListener("submit", function(event)
     xhttp.send("email=" + document.getElementById("email").value + "&password=" + document.getElementById("password").value);
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            // {"name":"Helena Joseph","photoUrl":"https://api.adorable.io/avatars/285/abott@adorable.png"}
             const data = JSON.parse(this.responseText);
             document.getElementById("avatar").src = data.photoUrl;
             document.getElementById("name").innerHTML = data.name;
