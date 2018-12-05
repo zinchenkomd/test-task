@@ -27,7 +27,7 @@ document.getElementById("logout_form").addEventListener("submit", function(event
 
 
 function showErrorMessage(message) {
-    document.getElementById("login_form__message").innerHTML = 'Something went wrong';
+    document.getElementById("login_form__message").innerHTML = message;
     document.getElementById("login_form__message_container").classList.remove('login_form__message_container_hidden');
     document.getElementById("login_form__message_container").classList.add('login_form__message_container');
 }
