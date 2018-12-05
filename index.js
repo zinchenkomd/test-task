@@ -1,24 +1,31 @@
 document.getElementById("login_form").addEventListener("submit", function(event){
     disableForm();
     event.preventDefault();
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "https://us-central1-mercdev-academy.cloudfunctions.net/login", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("email=" + document.getElementById("email").value + "&password=" + document.getElementById("password").value);
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            const data = JSON.parse(this.responseText);
-            document.getElementById("avatar").src = data.photoUrl;
-            document.getElementById("name").innerHTML = data.name;
-            showLogoutForm();
-        } else if (this.readyState == 4 && this.status == 400) {
-            const errorText = JSON.parse(this.responseText).error;
-            showErrorMessage(errorText);
-        } else {
-            showErrorMessage('Something went wrong');
-        }
+
+    async function login() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "https://us-central1-mercdev-academy.cloudfunctions.net/login", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("email=" + document.getElementById("email").value + "&password=" + document.getElementById("password").value);
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                const data = JSON.parse(this.responseText);
+                document.getElementById("avatar").src = data.photoUrl;
+                document.getElementById("name").innerHTML = data.name;
+                showLogoutForm();
+            } else if (this.readyState == 4 && this.status == 400) {
+                const errorText = JSON.parse(this.responseText).error;
+                showErrorMessage(errorText);
+            } else {
+                showErrorMessage('Something went wrong');
+            }
+        };
+    }
+
+    login().then(response => {
         enableForm();
-    };
+    });
+
 });
 
 document.getElementById("logout_form").addEventListener("submit", function(event){
