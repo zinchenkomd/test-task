@@ -3,31 +3,33 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" type="text/css"
-          href="./styles/desktop.css" media="(min-width: 1281px)" />
+          href="./styles/desktop.css" media="(min-width: 1281px)"/>
 </head>
 
 <body>
-    <img src="./images/logo.svg" alt="Mercury Development" class="logo" />
+    <div>
+        <img src="./images/logo.svg" alt="Mercury Development" class="logo"/>
 
-    <div class="form_container">
-        <form class="login_form" id="login_form">
-            <h1 class="login_form__title">Log In</h1>
-            <input type="email" id="email" placeholder="E-Mail" class="login_form__email" required />
-            <input type="password" id="password" placeholder="Password" class="login_form__password" required />
-            <div class="login_form__message_container_hidden" id="login_form__message_container">
-                <p class="login_form__message" id="login_form__message">E-Mail or password is incorrect</p>
-            </div>
-            <button class="login_form__button" id="button">Login</button>
-        </form>
+        <div class="form_container">
+            <form class="login_form" id="login_form">
+                <h1 class="login_form__title">Log In</h1>
+                <input type="email" id="email" placeholder="E-Mail" class="login_form__email" required/>
+                <input type="password" id="password" placeholder="Password" class="login_form__password" required/>
+                <div class="login_form__message_container_hidden" id="login_form__message_container">
+                    <p class="login_form__message" id="login_form__message">E-Mail or password is incorrect</p>
+                </div>
+                <button class="login_form__button" id="button">Login</button>
+            </form>
 
-        <form class="logout_form logout_form_hidden" id="logout_form">
-            <img class="logout_form__avatar" id="avatar" />
-            <h1 class="logout_form_name" id="name"></h1>
-            <button class="logout_form__button">Logout</button>
-        </form>
+            <form class="logout_form logout_form_hidden" id="logout_form">
+                <img class="logout_form__avatar" id="avatar"/>
+                <h1 class="logout_form_name" id="name"></h1>
+                <button class="logout_form__button">Logout</button>
+            </form>
+        </div>
     </div>
     <script type="text/javascript" src="./index.js"></script>
 </body>
