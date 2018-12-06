@@ -1,13 +1,13 @@
 @font-face {
     font-family: GothamBold;
-    src: url('./fonts/GothamBold.otf');
+    src: url('../fonts/GothamBold.otf');
 }
 @font-face {
     font-family: GothamMedium;
-    src: url('./fonts/GothamMedium.woff');
+    src: url('../fonts/GothamMedium.woff');
 }
 body {
-    background: url("./images/background.png") no-repeat center center fixed;
+    background: url("../images/background.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
